@@ -16,7 +16,7 @@
     />
     <title>Undefined Heroes</title>
     <script type="module" crossorigin src="/undefined-heroes/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/undefined-heroes/assets/index-B6-5FYJ7.css">
+    <link rel="stylesheet" crossorigin href="/undefined-heroes/assets/index-BcMdTDCz.css">
   </head>
   <body>
     <header class="header"></header>
@@ -68,10 +68,71 @@
     </main>
 
 
-    <footer class="footer">
+    <footer>
 
+        <div class="container">
+
+            <div class="footer-container">
+                <div class="footer-common">
+                   <picture>
+                    <source
+                    srcset="../img/footer/tab-hero-footer.png 1x, ../img/footer/tab-hero-footer@2.png 2x" 
+                    media="(min-width:1440px)">
+                    <source
+                    srcset="../img/footer/tab-hero-footer.png 1x, ../img/footer/tab-hero-footer@2.png 2x"
+                    media="(min-width:768px)">
+                    <source
+                    srcset="../img/footer/mb-hero-footer.png 1x, ../img/footer/mb-hero-footer@2.png 2x"
+                    media="(max-width:768px)">
+                    <img
+                    class="my-photo"
+                    src="../img/footer/tab-hero-footer.png"
+                    alt="Junior Frontend-developer"
+                    />
+                   </picture>
+                    <h2 class="footer-common-text">let's <span class="span-work">work </span>
+                    </h2>
+                    <h2 class="footer-common-text">together</h2>
+                </div>
+    
+                <form class="footer-form" action="">
+                    <div class="footer-form-wrapper">
+                        <div class="input-option">
+                            <input class="footer-form-input" type="email" autocomplete="off" pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required name="email" placeholder="clients@gmail.com">
+                            <span class="succes succes-is-hidden">Success!</span>
+                            <span class="invalid invalid-is-hidden">Invalid email, try again</span>
+                        </div>
+                            <input class="footer-form-input" type="text" autocomplete="off" required name="comment" placeholder="comments">
+                    <button class="footer-form-button" type="submit">Send</button>
+                    </div>
+                </form>
+
+                <address class="address">
+                    <ul class="address-list">
+                        <li class="address-item">
+                            <a class="address-link" href="mailto:lloudjefferson@gmail.com">lloudjefferson@gmail.com</a>
+                        </li>
+                        <li class="address-item">
+                            <a class="address-link" href="tel:+3801111111111">+380 11 1111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
+
+    
+                <div id="myModal" class="modal   modal-is-hidden"> 
+                    <div class="modal-content">
+                        <button class="modal-close-btn" type="button">
+                            <svg class="close-icon" width="22" height="22">
+                                <use href="../img/symbol-defs.svg#icon-user"></use>
+                            </svg>
+                        </button>
+                        <p class="modal-title">Thank you for your interest in cooperation!</p>
+                        <p class="modal-text">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+                    </div>
+                </div>
+            </div>
+    </div>
 </footer>
-
 
     
   </body>
