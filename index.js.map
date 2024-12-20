@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sources":["../src/js/covers.js"],"sourcesContent":["console.log(17);\n"],"names":[],"mappings":"ssBAAA,QAAQ,IAAI,EAAE"}
