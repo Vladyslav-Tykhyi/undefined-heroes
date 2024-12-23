@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/undefined-heroes/index.js"></script>
     <link rel="modulepreload" crossorigin href="/undefined-heroes/assets/vendor-CTqzIL4Y.js">
     <link rel="stylesheet" crossorigin href="/undefined-heroes/assets/vendor-CzG10Eoq.css">
-    <link rel="stylesheet" crossorigin href="/undefined-heroes/assets/index-6hRiMTZG.css">
+    <link rel="stylesheet" crossorigin href="/undefined-heroes/assets/index-BiwSBO2g.css">
   </head>
   <body>
     <header class="header">
@@ -855,29 +855,33 @@
             <form class="form"> 
                 
                 <div class="form-group-email">
-                    <label class="form-label-email" for="email"></label>
+                    <label class="form-label-email" 
+                    for="email"></label>
                     <input class="footer-form-input"
                     name="email"
                     value="clients@gmail.com"
-                    type="email" 
+                    type="text" 
                     autocomplete="off" 
-                    id="email" placeholder="clients@gmail.com" 
-                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"/>
+                    pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+                    id="email" 
+                    placeholder="clients@gmail.com" 
+                    />
                     <span class="succes succes-is-hidden">Success!</span>
                     <span class="invalid invalid-is-hidden">Invalid email, try again</span>
                 </div>
 
                 <div class="form-group-comments">
                     <label class="form-label-comments" for="comments"></label>
-                    <input class="footer-form-input"
-                    name="comments" 
-                    value="lalala"
-                    id="comments" 
-                    type="text" 
-                    autocomplete="off" 
-                    placeholder="comments">
+                    <div class="input-wrapper">
+                        <input class="footer-form-input"
+                            name="comments" 
+                            value="lalala"
+                            id="comments" 
+                            type="text" 
+                            autocomplete="off" 
+                            placeholder="comments">
+                    </div>
                 </div>
-
                     <button class="footer-form-button" type="submit">Send</button>
             </form>
 
@@ -895,20 +899,19 @@
 </div>
 </footer>
 
->
-
-    <div class="backdrop" id="modalBackdrop">
+<div class="backdrop" id="modalBackdrop">
     <div id="myModal" class="modal"> 
             <button class="modal-close-btn" type="button" id="closeModal">
                 <svg class="close-icon" width="22" height="22" fill="white">
-                    <use href="../img/icons.svg#icon-close"></use>
+                    <use href="/undefined-heroes/assets/icons-CX_g65Kl.svg#icon-arrow"></use>
                 </svg>
             </button>
-            <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
-            <p class="modal-text">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+            <h3 class="modal-title"></h3>
+            <p class="modal-text"></p>
     </div>
 </div>
 
+    
 
 
   </body>
