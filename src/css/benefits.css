@@ -75,11 +75,14 @@
   line-height: 1.09;
   width: auto;
   margin-right: auto;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 
-.benefits__btn:hover {
-  background-color: var(--red);
+.benefits__btn:hover,
+.benefits__btn:focus {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(200, 30, 40, 0.6), 0 0 25px rgba(200, 30, 40, 0.4);
+    background-color: var(--red);
 }
 
 @media screen and (max-width: 375px) {
