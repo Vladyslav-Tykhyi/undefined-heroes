@@ -162,15 +162,15 @@
 }
 
 .accordion-header.ac:hover .btn-arrow-down,
-.accordion-header.ac:hover .question {
+.accordion-header.ac:focus .btn-arrow-down,
+.accordion-header.ac:active .btn-arrow-down,
+.accordion-header.ac:hover .question,
+.accordion-header.ac:focus .question,
+.accordion-header.ac:active .question {
   transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .accordion-header.ac:hover .btn-arrow-down svg {
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
 .accordion-header.ac:hover .btn-arrow-down svg {
   stroke: var(--red);
