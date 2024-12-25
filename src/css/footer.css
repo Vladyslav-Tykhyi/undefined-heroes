@@ -381,3 +381,11 @@ input::placeholder {
 .iziToast {
   border-radius: 30px;
 }
+
+.border-bottom {
+  border-bottom: 1px solid var(--red);
+}
+
+.border-bottom-succes {
+  border-bottom: 1px solid #3cbc81;
+}

@@ -56,15 +56,15 @@ emailInput.addEventListener('blur', function () {
   if (inputEmail.value === '') {
     invalid.classList.add('invalid-is-hidden');
     succes.classList.add('succes-is-hidden');
-    inputEmail.style.borderBottom = '1px solid rgba(250, 250, 250, 0.6)';
+    inputEmail.classList.remove('border-bottom');
   } else if (pattern.test(value)) {
-    inputEmail.style.borderBottom = '1px solid #3cbc81';
+    inputEmail.classList.add('border-bottom-succes');
     succes.classList.remove('succes-is-hidden');
     invalid.classList.add('invalid-is-hidden');
   } else {
     succes.classList.add('succes-is-hidden');
     invalid.classList.remove('invalid-is-hidden');
-    inputEmail.style.borderBottom = '1px solid var(--red)';
+    inputEmail.classList.add('border-bottom');
   }
 });
 
