@@ -1,4 +1,4 @@
-// #region анімація карток
+// #region Анімація карток та підтримка взаємодії через мишу, клавіатуру та сенсорний екран
 
 document.addEventListener("DOMContentLoaded", () => {
     const prevBtn = document.querySelector('.btn-prev');
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll('.li-cards');
 
     let currentIndex = 0;
-    let isAnimating = false; // Флаг для предотвращения множества переключений
+    let isAnimating = false; // Прапорець для запобігання множинним перемиканням
 
     const updateButtons = () => {
         const prevArrow = prevBtn.querySelector('.svg-icon-scrool');
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const showNextCard = () => {
-        if (isAnimating || currentIndex >= cards.length - 1) return; // Блокируем, если идет анимация
+        if (isAnimating || currentIndex >= cards.length - 1) return; // Блокуємо, якщо йде анімація
         isAnimating = true;
 
         cards[currentIndex].classList.add('slide-out-left');
@@ -55,14 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 cards[currentIndex].classList.remove('slide-in-right');
-                isAnimating = false; // Снимаем блокировку
+                isAnimating = false; // Знімаємо блокування
                 updateButtons();
             }, 600);
         }, 600);
     };
 
     const showPrevCard = () => {
-        if (isAnimating || currentIndex <= 0) return; // Блокируем, если идет анимация
+        if (isAnimating || currentIndex <= 0) return; // Блокуємо, якщо йде анімація
         isAnimating = true;
 
         cards[currentIndex].classList.add('slide-out-right');
@@ -78,40 +78,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 cards[currentIndex].classList.remove('slide-in-left');
-                isAnimating = false; // Снимаем блокировку
+                isAnimating = false; // Знімаємо блокування
                 updateButtons();
             }, 600);
         }, 600);
     };
 
+    // Обробка подій кнопок
     nextBtn.addEventListener('click', showNextCard);
     prevBtn.addEventListener('click', showPrevCard);
 
-    updateButtons();
-});
-
-// #endregion анімація карток
-
-// #region анімація технічного списку
-
-document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll(".li-cards");
-    let index = 0;
-
-    function animateItems() {
-        const activeCard = document.querySelector(".li-cards.active");
-
-        if (activeCard) {
-            const techItems = activeCard.querySelectorAll(".li-tech-list");
-            techItems.forEach(item => item.classList.remove("active"));
-            techItems[index].classList.add("active");
-            index = (index + 1) % techItems.length;
-
-            setTimeout(animateItems, 2500);
+    // Обробка подій клавіатури
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight') {
+            showNextCard();
+        } else if (event.key === 'ArrowLeft') {
+            showPrevCard();
         }
-    }
+    });
 
-    animateItems();
+    // Реалізація свайпів для сенсорних екранів
+    let startX = 0;
+    let endX = 0;
+
+    document.addEventListener('touchstart', (event) => {
+        startX = event.touches[0].clientX;
+    });
+
+    document.addEventListener('touchmove', (event) => {
+        endX = event.touches[0].clientX;
+    });
+
+    document.addEventListener('touchend', () => {
+        const diff = startX - endX;
+
+        if (diff > 50) {
+            showNextCard(); // Свайп вліво
+        } else if (diff < -50) {
+            showPrevCard(); // Свайп вправо
+        }
+
+        startX = 0;
+        endX = 0;
+    });
+
+    // Реалізація перетягування мишкою
+    let isDragging = false;
+    let dragStartX = 0;
+
+    document.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        dragStartX = event.clientX;
+    });
+
+    document.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+    });
+
+    document.addEventListener('mouseup', (event) => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const dragEndX = event.clientX;
+        const diff = dragStartX - dragEndX;
+
+        if (diff > 50) {
+            showNextCard(); // Перетягування вліво
+        } else if (diff < -50) {
+            showPrevCard(); // Перетягування вправо
+        }
+    });
+
+    updateButtons();
+
+    // Додавання можливості пересування за допомогою Tab
+    prevBtn.setAttribute('tabindex', '0');
+    nextBtn.setAttribute('tabindex', '0');
 });
 
-// #endregion анімація технічного списку
+// #endregion Анімація карток
