@@ -18,6 +18,16 @@ function handlerPagination(entries, observer) {
       childrenOne.classList.add('container-covers-list-anim');
       childrenThree.classList.add('container-covers-list-anim');
       childrenTwo.classList.add('list-covers');
+    } else {
+      if (childrenOne.classList.contains('container-covers-list-anim')) {
+        childrenOne.classList.remove('container-covers-list-anim');
+      }
+      if (childrenThree.classList.contains('container-covers-list-anim')) {
+        childrenThree.classList.remove('container-covers-list-anim');
+      }
+      if (childrenTwo.classList.contains('list-covers')) {
+        childrenTwo.classList.remove('list-covers');
+      }
     }
   });
 }
