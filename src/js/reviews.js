@@ -54,16 +54,20 @@ const reviewsIconRight = reviewsSwiperButtonRight.querySelector(
 reviewsSwiper.on('slideChange', function () {
   if (reviewsSwiper.isBeginning) {
     reviewsSwiperButtonLeft.classList.remove('reviews-button-active');
+    reviewsSwiperButtonLeft.disabled = 'disabled';
     reviewsIconLeft.classList.remove('reviews-icon-active');
   } else {
     reviewsSwiperButtonLeft.classList.add('reviews-button-active');
+    reviewsSwiperButtonLeft.disabled = '';
     reviewsIconLeft.classList.add('reviews-icon-active');
   }
   if (reviewsSwiper.isEnd) {
     reviewsSwiperButtonRight.classList.remove('reviews-button-active');
+    reviewsSwiperButtonRight.disabled = 'disabled';
     reviewsIconRight.classList.remove('reviews-icon-active');
   } else {
     reviewsSwiperButtonRight.classList.add('reviews-button-active');
+    reviewsSwiperButtonRight.disabled = '';
     reviewsIconRight.classList.add('reviews-icon-active');
   }
 });
@@ -83,12 +87,13 @@ async function loadReviews() {
     iziToast.show({
       theme: 'dark',
       backgroundColor: '#EF4040',
-      message: `Error: ${error.message}`,
+      message: `Reviews error: ${error.message}`,
       messageSize: '16px',
       messageLineHeight: '150%',
       position: 'topRight',
       maxWidth: '354px',
     });
+    reviewsContainer.innerHTML = 'Not found';
   }
 }
 function createMarkupReviews(arr) {
