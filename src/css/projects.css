@@ -169,6 +169,7 @@
 }
 
 .btn-projects {
+  display: block;
   border-radius: 60px;
   padding: 13px 32px;
   width: max-content;

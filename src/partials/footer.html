@@ -1,83 +1,91 @@
 <footer id="footer" class="footer">
+  <div class="container footer-container">
+    <div class="footer-common">
+      <h2 class="footer-common-text">
+        <picture>
+          <source
+            srcset="
+              ./img/footer/tab-hero-footer.png    1x,
+              ./img/footer/tab-hero-footer@2x.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ./img/footer/mb-hero-footer.png    1x,
+              ./img/footer/mb-hero-footer@2x.png 2x
+            "
+            media="(max-width:768px)"
+          />
+          <img
+            class="my-photo"
+            src="./img/footer/tab-hero-footer.png"
+            alt="Junior Frontend-developer"
+          />
+        </picture>
+        let's <span class="span-work">work </span>together
+      </h2>
+    </div>
 
-    <div class="container footer-container">
+    <form class="form">
+      <div class="wrapper-input">
+        <div class="form-group-email">
+          <label class="form-label-email" for="email"></label>
+          <input
+            class="footer-form-input footer-form-button-hover"
+            name="email"
+            type="text"
+            autocomplete="off"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            id="email"
+            placeholder="clients@gmail.com"
+          />
+          <span class="succes succes-is-hidden">Success!</span>
+          <span class="invalid invalid-is-hidden"
+            >Invalid email, try again</span
+          >
+        </div>
 
-            <div class="footer-common">
-                <h2 class="footer-common-text">
-                    <picture>
-                        <source
-                        srcset="./img/footer/tab-hero-footer.png 1x,
-                        ./img/footer/tab-hero-footer@2x.png 2x"
-                        media="(min-width:768px)">
-                        <source
-                        srcset="./img/footer/mb-hero-footer.png 1x,
-                        ./img/footer/mb-hero-footer@2x.png 2x"
-                        media="(max-width:768px)">
-                        <img
-                        class="my-photo"
-                        src="./img/footer/tab-hero-footer.png"
-                        alt="Junior Frontend-developer"
-                        />
-                        </picture>
+        <div class="form-group-comments">
+          <label class="form-label-comments" for="comments"></label>
+          <input
+            class="footer-form-input footer-form-button-hover"
+            name="comments"
+            id="comments"
+            type="text"
+            autocomplete="off"
+            placeholder="comments"
+          />
+        </div>
+      </div>
+      <button class="footer-form-button" type="submit">Send</button>
+    </form>
 
-                   </picture>
-                   let's <span class="span-work">work </span>together
-                </h2>
-            </div>
-
-            <form class="form"> 
-                
-                <div class="wrapper-input">
-                    <div class="form-group-email">
-                        <label class="form-label-email" 
-                        for="email"></label>
-                        <input class="footer-form-input footer-form-button-hover"
-                        name="email"
-                        type="text" 
-                        autocomplete="off" 
-                        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-                        id="email" 
-                        placeholder="clients@gmail.com" 
-                        />
-                        <span class="succes succes-is-hidden">Success!</span>
-                        <span class="invalid invalid-is-hidden">Invalid email, try again</span>
-                    </div>
-    
-                    <div class="form-group-comments">
-                        <label class="form-label-comments" for="comments"></label>
-                            <input class="footer-form-input footer-form-button-hover"
-                                name="comments" 
-                                id="comments" 
-                                type="text" 
-                                autocomplete="off" 
-                                placeholder="comments">
-                    </div>
-                </div>
-                    <button class="footer-form-button" type="submit">Send</button>
-            </form>
-
-            <address class="address">
-                <ul class="address-list">
-                    <li class="address-item">
-                        <a class="address-link" href="mailto:lloudjefferson@gmail.com">lloudjefferson@gmail.com</a>
-                    </li>
-                    <li class="address-item">
-                        <a class="address-link" href="tel:+3801111111111">+380 11 1111 11 11</a>
-                    </li>
-                </ul>
-            </address>
-    
-</div>
+    <address class="address">
+      <ul class="address-list">
+        <li class="address-item">
+          <a class="address-link" href="mailto:lloudjefferson@gmail.com"
+            >lloudjefferson@gmail.com</a
+          >
+        </li>
+        <li class="address-item">
+          <a class="address-link" href="tel:+3801111111111"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
 </footer>
 
 <div class="backdrop" id="modalBackdrop">
-    <div id="myModal" class="modal"> 
-            <button class="modal-close-btn" type="button" id="closeModal">
-                <svg class="close-icon" width="22" height="22">
-                    <use href="./img/icons.svg#icon-close"></use>
-                </svg>
-            </button>
-            <h3 class="modal-title"></h3>
-            <p class="modal-text"></p>
-    </div>
+  <div id="myModal" class="modal">
+    <button class="modal-close-btn" type="button" id="closeModal">
+      <svg class="close-icon" width="22" height="22">
+        <use href="./img/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h3 class="modal-title"></h3>
+    <p class="modal-text"></p>
+  </div>
 </div>
