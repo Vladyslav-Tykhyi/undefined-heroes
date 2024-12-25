@@ -82,10 +82,10 @@
     margin-right: auto;
   }
   .benefits__list {
-    width: 320px;
+    max-width: 312px;
   }
   .benefits__list-item {
-    max-width: 320px;
+    max-width: 312px;
   }
 }
 

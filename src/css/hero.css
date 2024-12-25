@@ -10,7 +10,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   padding: 281px 0 32px 0;
-  margin-bottom: 64px;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -115,7 +114,6 @@
 
 @media screen and (min-width: 1440px) {
   .hero {
-    margin-bottom: 96px;
     background-image: url('/img/hero/red/bg.png');
   }
 
@@ -140,7 +138,7 @@
 
 .hero-item-link.hover,
 .hero-item-link:active,
-.header-item-link:focus {
+.hero-item-link:focus {
   color: var(--red);
   border-color: var(--red);
   box-shadow: 0 0 15px var(--red);

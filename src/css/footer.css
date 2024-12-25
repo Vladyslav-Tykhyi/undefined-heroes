@@ -74,7 +74,7 @@
   font-size: 16px;
   letter-spacing: -0.02em;
   color: #fafafa;
-  transition: background-color 0.3s ease;
+  transition: border-bottom 0.3s ease;
   margin-bottom: 4px;
 }
 
@@ -82,7 +82,7 @@
 .footer-form-input:focus {
   outline: none;
   border: none;
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid var(--red);
 }
 
 input::placeholder {
@@ -133,7 +133,8 @@ input::placeholder {
   transition: transform 0.3s ease, box-shadow 0.2s ease;
 }
 
-.footer-form-button:hover {
+.footer-form-button:hover,
+.footer-form-button:focus {
   background-color: #e0373f;
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(200, 30, 40, 0.6), 0 0 25px rgba(200, 30, 40, 0.4);
@@ -163,6 +164,7 @@ input::placeholder {
   transition: transform 0.3s ease, box-shadow 0.2s ease;
 }
 
+.address-link:focus,
 .address-link:hover {
   border: 1px solid var(--red);
   transform: scale(1.02);
