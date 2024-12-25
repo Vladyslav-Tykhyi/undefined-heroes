@@ -368,6 +368,7 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  transition: opacity 0.3s ease;
 }
 
 .iziToast-texts {

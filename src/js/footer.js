@@ -74,18 +74,20 @@ function showErrorToast(message) {
   iziToast.show({
     title: 'Attention!',
     titleColor: 'black',
-    titleSize: '16px',
+    titleSize: '20px',
     titleLineHeight: '150%',
     message: message,
-    messageColor: 'black',
-    messageSize: '16px',
+    messageSize: '18px',
     messageLineHeight: '150%',
-    backgroundColor: 'white',
     theme: 'light',
-    color: 'black',
     iconColor: 'white',
     position: 'center',
-    timeout: 3000,
+    timeout: 2000,
+    backgroundColor: '#ed3b44',
+    titleColor: '#fafafa',
+    messageColor: 'rgba(250, 250, 250, 0.6)',
+    closeOnEscape: true,
+    titleLineHeight: '120%',
   });
 }
 

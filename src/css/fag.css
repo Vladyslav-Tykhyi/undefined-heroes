@@ -1,4 +1,4 @@
-.faq-container {
+.faq {
   margin-bottom: 64px;
 }
 .faq-title {
@@ -69,7 +69,7 @@
   stroke: #fafafa;
 }
 @media screen and (min-width: 768px) {
-  .faq-container {
+  .faq {
     margin-bottom: 96px;
   }
   .accordion-header {
@@ -88,7 +88,7 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .faq-container {
+  .faq {
     margin-bottom: 164px;
   }
   .faq-list {
