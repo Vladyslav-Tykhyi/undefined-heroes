@@ -56,13 +56,13 @@
 .container-covers-list-item {
   flex-shrink: 0;
 }
-
-.portfolio-list-img:hover {
+.portfolio-list-img {
   transition-property: transform;
   transition-duration: 300ms;
   transition-timing-function: linear;
   transition-delay: 100ms;
-
+}
+.portfolio-list-img:hover {
   transform: scale(1.2);
 }
 .list-covers {
