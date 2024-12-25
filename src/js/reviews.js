@@ -8,8 +8,14 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
   // wrapperClass: 'review-swipper-wrapper',
   direction: 'horizontal',
   // slideClass: 'review-swiper-slide,'
-  //Enables navigation through slides using mouse wheel.
 
+  //Вмикає навігацію слайдами за допомогою клавіатури.
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+    pageUpDown: true,
+  },
+  //Enables navigation through slides using mouse wheel.
   mousewheel: {
     invert: true,
   },
