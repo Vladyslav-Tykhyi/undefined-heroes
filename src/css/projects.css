@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 0;
+      margin-bottom: 64px;
   }
 
   .li-cards {
