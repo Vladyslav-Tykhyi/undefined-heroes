@@ -105,11 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
         startX = event.touches[0].clientX;
     });
 
-    document.addEventListener('touchmove', (event) => {
-        endX = event.touches[0].clientX;
-    });
-
-    document.addEventListener('touchend', () => {
+    document.addEventListener('touchend', (event) => {
+        endX = event.changedTouches[0].clientX;
         const diff = startX - endX;
 
         if (diff > 50) {
@@ -129,10 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('mousedown', (event) => {
         isDragging = true;
         dragStartX = event.clientX;
-    });
-
-    document.addEventListener('mousemove', (event) => {
-        if (!isDragging) return;
     });
 
     document.addEventListener('mouseup', (event) => {
