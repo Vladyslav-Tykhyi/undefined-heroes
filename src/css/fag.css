@@ -1,5 +1,5 @@
 .faq {
-  margin-bottom: 64px;
+  padding: 32px 0 64px;
 }
 .faq-title {
   font-weight: 600;
@@ -70,7 +70,7 @@
 }
 @media screen and (min-width: 768px) {
   .faq {
-    margin-bottom: 96px;
+    padding: 32px 0 96px 0;
   }
   .accordion-header {
     gap: 90px;
@@ -89,7 +89,7 @@
 }
 @media screen and (min-width: 1440px) {
   .faq {
-    margin-bottom: 164px;
+    padding: 64px 0 164px 0;
   }
   .faq-list {
     display: flex;

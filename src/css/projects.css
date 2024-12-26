@@ -5,8 +5,6 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 0;
-    margin-bottom: 64px;
   }
 
   .li-cards {
@@ -18,8 +16,7 @@
 /* #region-mobile */
 
 .section {
-  margin-top: 0;
-  margin-bottom: 64px;
+  padding: 32px 0;
 }
 
 .title-projects {
@@ -282,8 +279,7 @@
 /* #region tab */
 @media screen and (min-width: 768px) {
   .section {
-    margin-top: 0;
-    margin-bottom: 96px;
+    padding: 32px 0 64px 0;
   }
 
   .li-cards {
@@ -347,8 +343,7 @@
 /* #region desktop */
 @media screen and (min-width: 1440px) {
   .section {
-    margin-top: 0;
-    margin-bottom: 164px;
+    padding: 64px 0 100px 0;
   }
 
   .li-cards {
@@ -378,11 +373,6 @@
   .img-projects {
     margin-left: 37px;
     margin-right: 37px;
-  }
-
-  .block-btn-scroll {
-    margin-left: 610px;
-    margin-right: 0;
   }
 }
 

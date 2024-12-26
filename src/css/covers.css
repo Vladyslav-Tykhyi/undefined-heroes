@@ -1,8 +1,6 @@
 .covers {
   overflow: hidden;
   width: 100%;
-
-  margin-bottom: 64px;
   backdrop-filter: blur(30px);
   background-image: linear-gradient(
       rgba(217, 217, 217, 0.04),
@@ -107,8 +105,6 @@
 
 @media screen and (min-width: 768px) {
   .covers {
-    margin-bottom: 96px;
-
     backdrop-filter: blur(30px);
     background-image: linear-gradient(
         rgba(217, 217, 217, 0.04),
@@ -142,8 +138,6 @@
 
 @media screen and (min-width: 1440px) {
   .covers {
-    margin-bottom: 164px;
-
     backdrop-filter: blur(30px);
     background-image: linear-gradient(
         rgba(217, 217, 217, 0.04),

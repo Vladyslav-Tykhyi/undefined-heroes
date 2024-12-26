@@ -1,6 +1,5 @@
-.reviews-container {
-  color: rgba(250, 250, 250, 0.4);
-  margin-bottom: 44px;
+.reviews {
+  padding: 64px 0 44px;
 }
 .reviews-title {
   font-weight: 600;
@@ -76,9 +75,10 @@
 }
 
 .reviews-button-active:hover {
-  box-shadow: 0 4px 12px rgba(200, 30, 40, 0.6), 0 0 25px rgba(200, 30, 40, 0.4);
+  box-shadow: 0 0 12px rgba(200, 30, 40, 0.6), 0 0 25px rgba(200, 30, 40, 0.4);
   /* Тень в цвет активной кнопки */
   transform: scale(1.02);
+
   /* Увеличение кнопки на 1.02 */
 }
 
@@ -92,8 +92,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .reviews-container {
-    margin-bottom: 76px;
+  .reviews {
+    padding: 96px 0 76px;
   }
   .reviews-swiper-navigation-buttons {
     gap: 20px;
@@ -114,9 +114,11 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .reviews {
+    padding: 164px 0 144px 0;
+  }
   .reviews-container {
     color: rgba(250, 250, 250, 0.4);
-    margin-bottom: 144px;
   }
   /* .reviews-swiper-navigation-buttons {    
   } */
@@ -137,14 +139,3 @@
   );
   box-sizing: content-box;
 }
-
-/* .review-swiper {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
-  display: block;
-} */

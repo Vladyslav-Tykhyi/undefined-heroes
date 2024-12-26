@@ -1,5 +1,5 @@
 .about {
-  margin: 64px 0;
+  padding: 64px 0 32px;
 }
 
 .about-me-container {
@@ -203,7 +203,7 @@ li.ac .ac-panel .ac-text .about-list-text-item:last-child {
 /* Styles for Tablet devices */
 @media screen and (min-width: 768px) {
   .about {
-    margin-bottom: 96px;
+    padding-bottom: 64px;
   }
   .about-me-thumb {
     margin-bottom: 64px;
@@ -266,7 +266,7 @@ li.ac .ac-panel .ac-text .about-list-text-item:last-child {
 
 @media screen and (min-width: 1440px) {
   .about {
-    margin: 96px 0 164px 0;
+    padding: 96px 0 100px 0;
   }
   .about-me-thumb {
     flex-direction: row;
