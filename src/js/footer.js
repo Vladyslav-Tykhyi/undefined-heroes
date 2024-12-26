@@ -57,6 +57,7 @@ emailInput.addEventListener('blur', function () {
     invalid.classList.add('invalid-is-hidden');
     succes.classList.add('succes-is-hidden');
     inputEmail.classList.remove('border-bottom');
+    inputEmail.classList.remove('border-bottom-succes');
   } else if (pattern.test(value)) {
     inputEmail.classList.add('border-bottom-succes');
     succes.classList.remove('succes-is-hidden');
@@ -101,7 +102,7 @@ function handlerSubmit(e) {
   const { email, comments } = e.target.elements;
 
   if (!email.value.trim()) {
-    showErrorToast('Email cannot be empty');
+    showErrorToast('Email can not be empty');
     return;
   }
 
