@@ -299,24 +299,24 @@ document.addEventListener('DOMContentLoaded', () => {
   activateHover();
   startAutoHover();
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        isSectionVisible =
-          entry.isIntersecting && entry.intersectionRatio >= 0.25;
-        if (isSectionVisible) {
-          startAutoHover();
-        } else {
-          stopAutoHover();
-        }
-      });
-    },
-    {
-      threshold: 0.25,
-    }
-  );
+  // const observer = new IntersectionObserver(
+  //   entries => {
+  //     entries.forEach(entry => {
+  //       isSectionVisible =
+  //         entry.isIntersecting && entry.intersectionRatio >= 0.25;
+  //       if (isSectionVisible) {
+  //         startAutoHover();
+  //       } else {
+  //         stopAutoHover();
+  //       }
+  //     });
+  //   },
+  //   {
+  //     threshold: 0.25,
+  //   }
+  // );
 
-  if (window.document.getElementById('hero')) {
-    observer.observe(section);
-  }
+  // if (window.document.getElementById('hero')) {
+  //   observer.observe(section);
+  // }
 });

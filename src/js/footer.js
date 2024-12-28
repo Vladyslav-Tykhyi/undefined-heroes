@@ -66,6 +66,7 @@ emailInput.addEventListener('blur', function () {
     succes.classList.add('succes-is-hidden');
     invalid.classList.remove('invalid-is-hidden');
     inputEmail.classList.add('border-bottom');
+    inputEmail.classList.remove('border-bottom-succes');
   }
 });
 
